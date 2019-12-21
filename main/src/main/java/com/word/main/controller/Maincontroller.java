@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Random;
 import java.lang.String;
 
+@Controller 
 public class Maincontroller {
     @Autowired
     private TopicService topicService;
