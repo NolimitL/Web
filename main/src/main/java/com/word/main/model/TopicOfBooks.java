@@ -1,4 +1,4 @@
-package com.word.main;
+package com.word.main.model;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;

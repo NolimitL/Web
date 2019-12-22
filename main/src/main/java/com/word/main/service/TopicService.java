@@ -1,5 +1,6 @@
-package com.word.main;
+package com.word.main.service;
 
+import com.word.main.model.TopicOfBooks;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
