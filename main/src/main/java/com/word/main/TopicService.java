@@ -1,6 +1,5 @@
 package com.word.main;
 
-import com.word.main.TopicOfBooks;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -16,5 +15,9 @@ public class TopicService {
 
     public List<TopicOfBooks> getTopic() {
         return topic;
+    }
+
+    public TopicOfBooks ChooseTopic(String id){
+        return topic.stream().filter(t -> t.getId().equals(id)).findFirst().get();
     }
 }
