@@ -10,10 +10,10 @@ import java.util.List;
 @RestController
 public class Maincontroller {
 
-    @Autowired //Авто-связь с классами
+    @Autowired                     //Авто-связь с классами
     private TopicService topicService;
 
-    @RequestMapping("/topic")  //@RequestMapping - отображение запроса (Request-запрос, Mapping-отображение)
+    @RequestMapping("/topic")           //@RequestMapping - отображение запроса (Request-запрос, Mapping-отображение)
     public List<TopicOfBooks> getAllTopics() {
         return topicService.getTopic();
     }
@@ -21,7 +21,7 @@ public class Maincontroller {
     public TopicOfBooks getTopic(@PathVariable("amountbook") String id){  //@PathVariable - подходящая переменная из ссылки переводиться в вводимый параметр
         return topicService.ChooseTopic(id);
     }
-    @RequestMapping(method = RequestMethod.POST, value = "/topic") //вызывает метод из аннотации
+    @RequestMapping(method = RequestMethod.POST, value = "/topic")      //вызывает метод из аннотации
     public void addTopicOfBook(@RequestBody TopicOfBooks topicOfBooks){
         topicService.addTopic(topicOfBooks);
     }

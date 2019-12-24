@@ -1,18 +1,25 @@
 package com.word.main.model;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.persistence.Entity;
+
 //@RestController
 //@Component
+@Entity
 public class TopicOfBooks {
 
+    @Id
     private String id;
     private String name;
     private String writer;
 
     public TopicOfBooks(int id, String name, String writer) {
+        super();
         this.id = Integer.toString(id);
         this.name = name;
         this.writer = writer;
