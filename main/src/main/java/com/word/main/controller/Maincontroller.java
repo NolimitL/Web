@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class Maincontroller {
 
-    @Autowired                     //Авто-связь с классами
+    @Autowired                   //Авто-связь с классами
     private TopicService topicService;
 
     @RequestMapping("/topic")           //@RequestMapping - отображение запроса (Request-запрос, Mapping-отображение)
@@ -33,10 +33,14 @@ public class Maincontroller {
     public void deleteTopic(@PathVariable("amountbook") String id) {
          topicService.deleteTopic(id);
     }
+    @RequestMapping(method = RequestMethod.GET, value = "/topic/name/{name}")
+    public TopicOfBooks findName(@PathVariable("name") String name){
+        return topicService.findName(name);
+    }
 }
 
 //    @GetMapping("/")
-//    public String line(Model first){
+//    public String line(Mod    el first){
 //        first.addAttribute("name", "Leonid");
 //        first.addAttribute("array", Ar());
 //        return "index";

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //@RestController
 //@Component
-@Document(value = "topics")
+@Document(value = "topic")
 public class TopicOfBooks {
 
     @Id
@@ -18,9 +18,7 @@ public class TopicOfBooks {
     private String name;
     private String writer;
 
-    public TopicOfBooks(int id, String name, String writer) {
-        super();
-        this.id = Integer.toString(id);
+    public TopicOfBooks( String name, String writer) {
         this.name = name;
         this.writer = writer;
     }

@@ -48,4 +48,7 @@ public class TopicService {
         iTopicRepository.deleteById(id);
 //        topic.removeIf(t -> t.getId().equals(id));
     }
+    public TopicOfBooks findName(String name){
+        return iTopicRepository.findByName(name);
+    }
 }
