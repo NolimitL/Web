@@ -21,9 +21,7 @@ public class TopicService {
 //    ));
 
     public List<TopicOfBooks> getTopic() {
-        List<TopicOfBooks> topic = new ArrayList<>();
-        iTopicRepository.findAll().forEach(topic::add);
-        return topic;
+        return iTopicRepository.findAll();
     }
 
     public TopicOfBooks ChooseTopic(String id){

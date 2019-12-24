@@ -2,15 +2,15 @@ package com.word.main.model;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.persistence.Entity;
 
 //@RestController
 //@Component
-@Entity
+@Document(value = "topics")
 public class TopicOfBooks {
 
     @Id
