@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin // эта аннотация принимает запрос
 @RestController
 public class Maincontroller {
 
