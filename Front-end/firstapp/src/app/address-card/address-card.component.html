@@ -2,7 +2,9 @@
 <div>
     <p>{{user.name}}</p>
     <p>{{user.title}}</p>
-    <p>{{user.address[0]}}</p>
-    <p>{{user.address[1]}}</p>
+    <div *ngIf = "user.address.lenght != 0">
+        <p>Address:</p>
+        <p *ngFor = "let usersAddress of user.address">{{usersAddress}}</p>
+    </div>
     <p>{{user.phone}}</p>
 </div>
