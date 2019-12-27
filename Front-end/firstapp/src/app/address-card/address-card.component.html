@@ -2,9 +2,9 @@
 <div class="address">
     <p class="name">{{user.name}}</p>
     <p class="title">{{user.designation}}</p>
-    <button (click)="!isCollapse"> Expand / Collaps </button>
-    <div *ngIf="isItCollapse">
-        <div *ngIf = "user.address.lenght != 0">
+    <button (click)="isItCollapse()"> Expand / Collaps </button>
+    <div *ngIf="isCollapse">
+        <div *ngIf = "user.address.length">
             <p>Address:</p>
             <p class="itselfAdress" *ngFor = "let usersAddress of user.address">{{usersAddress}}</p>
         </div>

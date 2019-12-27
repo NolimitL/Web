@@ -14,7 +14,7 @@ export class AddressCardComponent implements OnInit {
   constructor() { }
 
   isItCollapse(){
-    this.isCollapse != this.isCollapse;
+    this.isCollapse = !this.isCollapse;
   }
   ngOnInit() {
   }
