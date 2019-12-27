@@ -1,10 +1,16 @@
 <p>address-card works!</p>
-<div>
-    <p>{{user.name}}</p>
-    <p>{{user.title}}</p>
-    <div *ngIf = "user.address.lenght != 0">
-        <p>Address:</p>
-        <p *ngFor = "let usersAddress of user.address">{{usersAddress}}</p>
+<div class="address">
+    <p class="name">{{user.name}}</p>
+    <p class="title">{{user.designation}}</p>
+    <button (click)="!isCollapse"> Expand / Collaps </button>
+    <div *ngIf="isItCollapse">
+        <div *ngIf = "user.address.lenght != 0">
+            <p>Address:</p>
+            <p class="itselfAdress" *ngFor = "let usersAddress of user.address">{{usersAddress}}</p>
+        </div>
+        <div class="phone">
+            <p>Phone:</p>
+        <strong>{{user.phone}}</strong>
+        </div>
     </div>
-    <p>{{user.phone}}</p>
 </div>
