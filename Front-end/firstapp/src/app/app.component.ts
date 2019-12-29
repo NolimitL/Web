@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import axios from 'axios';
 import { User } from './address-card/user.model';
 import { ExtraIn } from './extra/extra-inf';
+import { FuntionalService } from './funtional.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +14,16 @@ export class AppComponent {
   
   userIN: User;
   extrainform: ExtraIn;
+  inputText: string = 'Write text';
   
-  constructor(){
+  constructor(private funsvc:FuntionalService, private http:HttpClient){
+    //obs (obsevable/observe - наблюдаемый/обзор)
+    // let obs = this.http.get('https://api.github.com/users/NolimitL');
+    // obs.subscribe(() => console.log("Got the response."));
+    // obs.subscribe((response)=>console.log(response));
+
+    funsvc.printsomeText('Hi everyone!');
+
     this.extrainform = new ExtraIn;
     this.extrainform.age = 23;
     this.extrainform.experience = '3 years';
