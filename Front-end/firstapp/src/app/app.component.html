@@ -7,13 +7,23 @@
 <button (click)="getNewSite()">New Site</button>
 <ul>
   <li *ngFor="let name of string"></li>
-</ul>
+</ul> -->
 
-<h1>Hi Everyone</h1>
-<app-date></app-date> -->
 <p>-------------------------------------------------</p>
+
+<a *ngFor="let route of routes" [routerLink]="route.url">{{route.linkName}}</a>
+
+
+<!-- <a routerLink="settings">settings</a>
+<a routerLink="settings/profile">profile</a>
+<a routerLink="home">home</a> -->
+
+
+<!-- <h1>Hi Everyone</h1>
+<app-date></app-date> 
+
 <app-address-card [usermy]="userIN"></app-address-card>
 <p>More infomation:</p>
-<app-extra [inform]="extrainform"></app-extra>
-<!-- <p><input type="text" [(ngModel)]="inputText"></p>{{inputText}} -->
+<app-extra [inform]="extrainform"></app-extra> 
+<p><input type="text" [(ngModel)]="inputText"></p>{{inputText}} -->
 <router-outlet></router-outlet>

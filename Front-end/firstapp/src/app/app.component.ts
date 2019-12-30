@@ -11,6 +11,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  routes = [
+    { linkName:"Home", url:"home"},
+    { linkName:"Settings", url:"settings"},
+  ]
   
   userIN: User;
   extrainform: ExtraIn;
